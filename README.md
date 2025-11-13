@@ -34,8 +34,8 @@ Control and monitor your Amazon Parental Dashboard remotely through Home Assista
 
 **Step 1: Clone the repository**
 ```bash
-git clone https://github.com/yourusername/amazon-parental-dashboard.git
-cd amazon-parental-dashboard
+git clone https://github.com/Booza1981/Amazon_Parent_Dashboard_Home_Assistant_Integration.git
+cd Amazon_Parent_Dashboard_Home_Assistant_Integration
 ```
 
 **Step 2: Authenticate with Amazon (one-time setup)**
@@ -160,8 +160,8 @@ If you're running this on a headless Linux server (no GUI), you need to generate
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/amazon-parental-dashboard.git
-   cd amazon-parental-dashboard
+   git clone https://github.com/Booza1981/Amazon_Parent_Dashboard_Home_Assistant_Integration.git
+   cd Amazon_Parent_Dashboard_Home_Assistant_Integration
    ```
 
 2. Set up Python environment:
