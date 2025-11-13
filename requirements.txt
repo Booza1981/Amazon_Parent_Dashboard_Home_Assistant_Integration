@@ -1,0 +1,4 @@
+playwright
+requests
+paho-mqtt
+flask

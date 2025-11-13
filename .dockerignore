@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# Exploration and testing files
+amazon/exploration_data/
+amazon/explore_dashboard.py
+amazon/network_monitor.py
+amazon/capture_time_limit_toggle.py
+amazon/html_data_extractor.py
+EXPLORATION_README.md
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Documentation (not needed at runtime)
+README.md
+QUICKSTART.md
+DOCKER_GUIDE.md
+*.md
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+tests/
+test_*.py

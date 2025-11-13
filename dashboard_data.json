@@ -1,0 +1,1226 @@
+{
+  "timestamp": "2025-11-13T09:28:09.578871",
+  "children": [
+    {
+      "child_id": "amzn1.account.AFUYVZCWLIMFJTJTEGAKY3CGG4PA",
+      "child_name": "Sadie",
+      "avatar_uri": "https://images-na.ssl-images-amazon.com/images/G/01/kindle/tahoe/avatars/jem/avatar_24.png",
+      "role": "CHILD"
+    }
+  ],
+  "usage": {
+    "today_minutes": 62.0,
+    "week_minutes": 543.4166666666666,
+    "weekly_breakdown": [
+      {
+        "date": "2025-11-06",
+        "minutes": 71.53333333333333
+      },
+      {
+        "date": "2025-11-08",
+        "minutes": 75.65
+      },
+      {
+        "date": "2025-11-09",
+        "minutes": 67.76666666666667
+      },
+      {
+        "date": "2025-11-10",
+        "minutes": 123.8
+      },
+      {
+        "date": "2025-11-11",
+        "minutes": 49.96666666666667
+      },
+      {
+        "date": "2025-11-12",
+        "minutes": 92.7
+      },
+      {
+        "date": "2025-11-13",
+        "minutes": 62.0
+      }
+    ],
+    "raw_data": [
+      {
+        "category": "APP",
+        "aggregatedDuration": 166,
+        "aggregatedCount": 2,
+        "intervals": [
+          {
+            "startTime": 1762560000,
+            "endTime": 1762646399,
+            "aggregatedDuration": 160,
+            "aggregatedCount": 1,
+            "aggregatedActivityResults": [
+              {
+                "key": "//amazon-app/B004Y1WCDE",
+                "activityCount": 3,
+                "activityDuration": 160,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_APP",
+                  "TITLE": "Plex: Stream Movies & TV",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://images-na.ssl-images-amazon.com/images/I/21hopceMfJL.png",
+                  "ORIGINAL_KEY": "B004Y1WCDE",
+                  "DETAIL_PAGE_LINK": "https://amazon.co.uk/dp/B004Y1WCDE",
+                  "CATEGORY": "APP"
+                },
+                "lastActivityTimeStamp": 1762590667,
+                "counter": 160,
+                "queryLog": null
+              }
+            ]
+          },
+          {
+            "startTime": 1762732800,
+            "endTime": 1762819199,
+            "aggregatedDuration": 6,
+            "aggregatedCount": 1,
+            "aggregatedActivityResults": [
+              {
+                "key": "//amazon-app/B004Y1WCDE",
+                "activityCount": 1,
+                "activityDuration": 6,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_APP",
+                  "TITLE": "Plex: Stream Movies & TV",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://images-na.ssl-images-amazon.com/images/I/21hopceMfJL.png",
+                  "ORIGINAL_KEY": "B004Y1WCDE",
+                  "DETAIL_PAGE_LINK": "https://amazon.co.uk/dp/B004Y1WCDE",
+                  "CATEGORY": "APP"
+                },
+                "lastActivityTimeStamp": 1762796860,
+                "counter": 6,
+                "queryLog": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "VIDEO",
+        "aggregatedDuration": 32439,
+        "aggregatedCount": 29,
+        "intervals": [
+          {
+            "startTime": 1762387200,
+            "endTime": 1762473599,
+            "aggregatedDuration": 4292,
+            "aggregatedCount": 6,
+            "aggregatedActivityResults": [
+              {
+                "key": "//amazon-video/amzn1.dv.gti.80a9f665-c31c-5dab-3270-a4511469c29f",
+                "activityCount": 2,
+                "activityDuration": 1489,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Seahawk",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/98386d081bb4ec16f41bf13a44b36e3c01b60cc4f13b1a954a5c208c7ad11546.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.80a9f665-c31c-5dab-3270-a4511469c29f",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762415842,
+                "counter": 1489,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.b8a9f68d-161f-b165-80c3-b45ddc70a9d7",
+                "activityCount": 1,
+                "activityDuration": 756,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Recycling / The Boat Pond",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/95c1b6c8ecfbf792a7294d6a9ecc081908a4d4fec6c70cb6d9883bf479f359d8.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.b8a9f68d-161f-b165-80c3-b45ddc70a9d7",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762451236,
+                "counter": 756,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.a220d1b7-9237-4b6e-a3ce-eed327ea473b",
+                "activityCount": 1,
+                "activityDuration": 664,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "The Big Show",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/6cf88437bfb139e852677d3c13a06f30fc8cecc596dd5e0dc59d51526453819a.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.a220d1b7-9237-4b6e-a3ce-eed327ea473b",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762449837,
+                "counter": 664,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.38a9f689-5f94-99d9-150c-aaca6ca9d5f5",
+                "activityCount": 1,
+                "activityDuration": 610,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "The Camper Van / The Camping Holiday",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/11b5f7314a0698563a9f32e85ca84d31fb41366a43db195e635645a7f35c86e5.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.38a9f689-5f94-99d9-150c-aaca6ca9d5f5",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762451865,
+                "counter": 610,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.96a9f69e-2683-775d-2fa1-42ba03acc802",
+                "activityCount": 1,
+                "activityDuration": 585,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "The Time Capsule / Rock Pools",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/a61c1af1ac809f3a0724a96b983cf426bfd6db4f1cc50fdc6a8079a94a9cf4d0.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.96a9f69e-2683-775d-2fa1-42ba03acc802",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762450471,
+                "counter": 585,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.f8a9f69f-1807-5bb2-8c8f-211b94e4a663",
+                "activityCount": 1,
+                "activityDuration": 188,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Dentist / School Bus Trip",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/d7214b30eae44e20f53aebe231b7396caf9380c8f03a2f79f4829aa007c2cdec.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.f8a9f69f-1807-5bb2-8c8f-211b94e4a663",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762452072,
+                "counter": 188,
+                "queryLog": null
+              }
+            ]
+          },
+          {
+            "startTime": 1762560000,
+            "endTime": 1762646399,
+            "aggregatedDuration": 4379,
+            "aggregatedCount": 4,
+            "aggregatedActivityResults": [
+              {
+                "key": "//amazon-video/amzn1.dv.gti.86b9f7eb-d301-47f2-4d13-58e3ed3681e9",
+                "activityCount": 1,
+                "activityDuration": 2928,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Enchantimals Secrets of Snowy Valley",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/0ce9d6de3d47021c214c0686a8cb87c43246df2563b6a85e25b23ec49099d4c7.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.86b9f7eb-d301-47f2-4d13-58e3ed3681e9",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762612805,
+                "counter": 2928,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.852a94e2-267e-4d51-b10c-c9bfc804d19c",
+                "activityCount": 1,
+                "activityDuration": 808,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Sea Patrol: Pups Save the Sunken Sloop / Sea Patrol: Pups Save a Wiggly Whale",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/6152d69f96c6d107bbf964080c559268c4fff087907dac1fe0ba4714bff0cd11.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.852a94e2-267e-4d51-b10c-c9bfc804d19c",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762613797,
+                "counter": 808,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.b6a9f65c-7132-5945-c1f9-7fb47c4aec92",
+                "activityCount": 3,
+                "activityDuration": 638,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Windy Castle / My Cousin Chloe",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/50735acf24b732946f0bfa38602cfbc76befec9f24f96f730c9b0b6a575a0ad7.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.b6a9f65c-7132-5945-c1f9-7fb47c4aec92",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762609858,
+                "counter": 638,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.b8a9f68d-161f-b165-80c3-b45ddc70a9d7",
+                "activityCount": 1,
+                "activityDuration": 5,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Recycling / The Boat Pond",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/95c1b6c8ecfbf792a7294d6a9ecc081908a4d4fec6c70cb6d9883bf479f359d8.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.b8a9f68d-161f-b165-80c3-b45ddc70a9d7",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762590285,
+                "counter": 5,
+                "queryLog": null
+              }
+            ]
+          },
+          {
+            "startTime": 1762646400,
+            "endTime": 1762732799,
+            "aggregatedDuration": 4066,
+            "aggregatedCount": 3,
+            "aggregatedActivityResults": [
+              {
+                "key": "//amazon-video/amzn1.dv.gti.86b9f7eb-d301-47f2-4d13-58e3ed3681e9",
+                "activityCount": 2,
+                "activityDuration": 2211,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Enchantimals Secrets of Snowy Valley",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/0ce9d6de3d47021c214c0686a8cb87c43246df2563b6a85e25b23ec49099d4c7.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.86b9f7eb-d301-47f2-4d13-58e3ed3681e9",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762708946,
+                "counter": 2211,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.60a9f671-bdba-f1bd-0c3b-d523dc9df04a",
+                "activityCount": 1,
+                "activityDuration": 1497,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Curious George: A Halloween Boo Suit",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/694bcdbdc6c76db4283f179b574e04fc9ae277e75751bca1860b75fe876c59a3.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.60a9f671-bdba-f1bd-0c3b-d523dc9df04a",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762679839,
+                "counter": 1497,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.87f72e71-16f6-4a9c-ba4a-5eb54ed4d3c2",
+                "activityCount": 2,
+                "activityDuration": 358,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Follow Your Passion",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.87f72e71-16f6-4a9c-ba4a-5eb54ed4d3c2",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762710216,
+                "counter": 358,
+                "queryLog": null
+              }
+            ]
+          },
+          {
+            "startTime": 1762732800,
+            "endTime": 1762819199,
+            "aggregatedDuration": 7422,
+            "aggregatedCount": 5,
+            "aggregatedActivityResults": [
+              {
+                "key": "//amazon-video/amzn1.dv.gti.0ea9f76e-aba5-53bc-7973-de2b0735305e",
+                "activityCount": 2,
+                "activityDuration": 2907,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Curious George",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/1eb731ce8c0be19abc287c8b780a50e8a8160e43e001c1ae066724d9427e0a02.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.0ea9f76e-aba5-53bc-7973-de2b0735305e",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762802117,
+                "counter": 2907,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.87f72e71-16f6-4a9c-ba4a-5eb54ed4d3c2",
+                "activityCount": 4,
+                "activityDuration": 1940,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Follow Your Passion",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.87f72e71-16f6-4a9c-ba4a-5eb54ed4d3c2",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762799182,
+                "counter": 1940,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.c9c347ae-a01a-40d2-a6be-941c67eb7e6e",
+                "activityCount": 2,
+                "activityDuration": 1325,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Marella",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.c9c347ae-a01a-40d2-a6be-941c67eb7e6e",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762798202,
+                "counter": 1325,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.6107ad75-219e-483c-8383-2eae4d0c2cf6",
+                "activityCount": 1,
+                "activityDuration": 645,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Part of the Herd",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.6107ad75-219e-483c-8383-2eae4d0c2cf6",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762762282,
+                "counter": 645,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.29369d01-2d57-4bf5-9402-ce390af8871a",
+                "activityCount": 1,
+                "activityDuration": 605,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Strike a Chord",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.29369d01-2d57-4bf5-9402-ce390af8871a",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762760738,
+                "counter": 605,
+                "queryLog": null
+              }
+            ]
+          },
+          {
+            "startTime": 1762819200,
+            "endTime": 1762905599,
+            "aggregatedDuration": 2998,
+            "aggregatedCount": 5,
+            "aggregatedActivityResults": [
+              {
+                "key": "//amazon-video/amzn1.dv.gti.60a9f671-bdba-f1bd-0c3b-d523dc9df04a",
+                "activityCount": 1,
+                "activityDuration": 1893,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Curious George: A Halloween Boo Suit",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/694bcdbdc6c76db4283f179b574e04fc9ae277e75751bca1860b75fe876c59a3.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.60a9f671-bdba-f1bd-0c3b-d523dc9df04a",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762848249,
+                "counter": 1893,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.c9c347ae-a01a-40d2-a6be-941c67eb7e6e",
+                "activityCount": 1,
+                "activityDuration": 665,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Marella",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.c9c347ae-a01a-40d2-a6be-941c67eb7e6e",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762883860,
+                "counter": 665,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.29369d01-2d57-4bf5-9402-ce390af8871a",
+                "activityCount": 1,
+                "activityDuration": 364,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Strike a Chord",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.29369d01-2d57-4bf5-9402-ce390af8871a",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762883191,
+                "counter": 364,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.261708fa-5f96-49c9-8178-8564a2b78928",
+                "activityCount": 2,
+                "activityDuration": 49,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Peppa Pig: The Golden Boots",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/ae94ca7e2755d893ee80d0bf3dc2258d79da0a94f83266b290fd73aa00a80402.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.261708fa-5f96-49c9-8178-8564a2b78928",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762883888,
+                "counter": 49,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.32af9617-6b1d-1bd5-9897-a0d8130b1e40",
+                "activityCount": 1,
+                "activityDuration": 27,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "The Very Special Jelly / The Bushwalk",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/c8a687b2ac43d4e632d0430d1c73916c80d6e48657005d4d0949d732642f1555.png",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.32af9617-6b1d-1bd5-9897-a0d8130b1e40",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762893665,
+                "counter": 27,
+                "queryLog": null
+              }
+            ]
+          },
+          {
+            "startTime": 1762905600,
+            "endTime": 1762991999,
+            "aggregatedDuration": 5562,
+            "aggregatedCount": 4,
+            "aggregatedActivityResults": [
+              {
+                "key": "//amazon-video/amzn1.dv.gti.0ea9f76e-aba5-53bc-7973-de2b0735305e",
+                "activityCount": 1,
+                "activityDuration": 1763,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Curious George",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/1eb731ce8c0be19abc287c8b780a50e8a8160e43e001c1ae066724d9427e0a02.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.0ea9f76e-aba5-53bc-7973-de2b0735305e",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762971544,
+                "counter": 1763,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.c9c347ae-a01a-40d2-a6be-941c67eb7e6e",
+                "activityCount": 4,
+                "activityDuration": 1471,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Marella",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.c9c347ae-a01a-40d2-a6be-941c67eb7e6e",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762973672,
+                "counter": 1471,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.32af9617-6b1d-1bd5-9897-a0d8130b1e40",
+                "activityCount": 2,
+                "activityDuration": 1356,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "The Very Special Jelly / The Bushwalk",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/c8a687b2ac43d4e632d0430d1c73916c80d6e48657005d4d0949d732642f1555.png",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.32af9617-6b1d-1bd5-9897-a0d8130b1e40",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762934356,
+                "counter": 1356,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.29369d01-2d57-4bf5-9402-ce390af8871a",
+                "activityCount": 3,
+                "activityDuration": 972,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Strike a Chord",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.29369d01-2d57-4bf5-9402-ce390af8871a",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1762973595,
+                "counter": 972,
+                "queryLog": null
+              }
+            ]
+          },
+          {
+            "startTime": 1762992000,
+            "endTime": 1763078399,
+            "aggregatedDuration": 3720,
+            "aggregatedCount": 2,
+            "aggregatedActivityResults": [
+              {
+                "key": "//amazon-video/amzn1.dv.gti.b6ace78f-5e8c-67e5-e7bb-b11e21fd5288",
+                "activityCount": 2,
+                "activityDuration": 2999,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "Sing",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/bb0ee193b4718171f27060aa19bdf9944be43252e2688aa2b2bbf0adfe7ee4af.jpg",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.b6ace78f-5e8c-67e5-e7bb-b11e21fd5288",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1763022411,
+                "counter": 2999,
+                "queryLog": null
+              },
+              {
+                "key": "//amazon-video/amzn1.dv.gti.32af9617-6b1d-1bd5-9897-a0d8130b1e40",
+                "activityCount": 1,
+                "activityDuration": 721,
+                "attributes": {
+                  "AUTHORITY": "AMAZON_VIDEO",
+                  "TITLE": "The Very Special Jelly / The Bushwalk",
+                  "IS_STORE_ITEM": "true",
+                  "THUMBNAIL_URL": "https://m.media-amazon.com/images/S/pv-target-images/c8a687b2ac43d4e632d0430d1c73916c80d6e48657005d4d0949d732642f1555.png",
+                  "ORIGINAL_KEY": "amzn1.dv.gti.32af9617-6b1d-1bd5-9897-a0d8130b1e40",
+                  "CATEGORY": "VIDEO"
+                },
+                "lastActivityTimeStamp": 1763019381,
+                "counter": 721,
+                "queryLog": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-13T09:28:09.993243"
+  },
+  "viewing_history": [
+    {
+      "content_title": "Plex: Stream Movies & TV",
+      "content_type": "APP",
+      "duration_minutes": 2.7,
+      "duration_seconds": 160,
+      "date": "2025-11-08",
+      "last_accessed": "2025-11-08T08:31:07",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/21hopceMfJL.png",
+      "activity_count": 3
+    },
+    {
+      "content_title": "Plex: Stream Movies & TV",
+      "content_type": "APP",
+      "duration_minutes": 0.1,
+      "duration_seconds": 6,
+      "date": "2025-11-10",
+      "last_accessed": "2025-11-10T17:47:40",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/21hopceMfJL.png",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Seahawk",
+      "content_type": "VIDEO",
+      "duration_minutes": 24.8,
+      "duration_seconds": 1489,
+      "date": "2025-11-06",
+      "last_accessed": "2025-11-06T07:57:22",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/98386d081bb4ec16f41bf13a44b36e3c01b60cc4f13b1a954a5c208c7ad11546.jpg",
+      "activity_count": 2
+    },
+    {
+      "content_title": "Recycling / The Boat Pond",
+      "content_type": "VIDEO",
+      "duration_minutes": 12.6,
+      "duration_seconds": 756,
+      "date": "2025-11-06",
+      "last_accessed": "2025-11-06T17:47:16",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/95c1b6c8ecfbf792a7294d6a9ecc081908a4d4fec6c70cb6d9883bf479f359d8.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "The Big Show",
+      "content_type": "VIDEO",
+      "duration_minutes": 11.1,
+      "duration_seconds": 664,
+      "date": "2025-11-06",
+      "last_accessed": "2025-11-06T17:23:57",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/6cf88437bfb139e852677d3c13a06f30fc8cecc596dd5e0dc59d51526453819a.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "The Camper Van / The Camping Holiday",
+      "content_type": "VIDEO",
+      "duration_minutes": 10.2,
+      "duration_seconds": 610,
+      "date": "2025-11-06",
+      "last_accessed": "2025-11-06T17:57:45",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/11b5f7314a0698563a9f32e85ca84d31fb41366a43db195e635645a7f35c86e5.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "The Time Capsule / Rock Pools",
+      "content_type": "VIDEO",
+      "duration_minutes": 9.8,
+      "duration_seconds": 585,
+      "date": "2025-11-06",
+      "last_accessed": "2025-11-06T17:34:31",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/a61c1af1ac809f3a0724a96b983cf426bfd6db4f1cc50fdc6a8079a94a9cf4d0.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Dentist / School Bus Trip",
+      "content_type": "VIDEO",
+      "duration_minutes": 3.1,
+      "duration_seconds": 188,
+      "date": "2025-11-06",
+      "last_accessed": "2025-11-06T18:01:12",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/d7214b30eae44e20f53aebe231b7396caf9380c8f03a2f79f4829aa007c2cdec.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Enchantimals Secrets of Snowy Valley",
+      "content_type": "VIDEO",
+      "duration_minutes": 48.8,
+      "duration_seconds": 2928,
+      "date": "2025-11-08",
+      "last_accessed": "2025-11-08T14:40:05",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/0ce9d6de3d47021c214c0686a8cb87c43246df2563b6a85e25b23ec49099d4c7.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Sea Patrol: Pups Save the Sunken Sloop / Sea Patrol: Pups Save a Wiggly Whale",
+      "content_type": "VIDEO",
+      "duration_minutes": 13.5,
+      "duration_seconds": 808,
+      "date": "2025-11-08",
+      "last_accessed": "2025-11-08T14:56:37",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/6152d69f96c6d107bbf964080c559268c4fff087907dac1fe0ba4714bff0cd11.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Windy Castle / My Cousin Chloe",
+      "content_type": "VIDEO",
+      "duration_minutes": 10.6,
+      "duration_seconds": 638,
+      "date": "2025-11-08",
+      "last_accessed": "2025-11-08T13:50:58",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/50735acf24b732946f0bfa38602cfbc76befec9f24f96f730c9b0b6a575a0ad7.jpg",
+      "activity_count": 3
+    },
+    {
+      "content_title": "Recycling / The Boat Pond",
+      "content_type": "VIDEO",
+      "duration_minutes": 0.1,
+      "duration_seconds": 5,
+      "date": "2025-11-08",
+      "last_accessed": "2025-11-08T08:24:45",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/95c1b6c8ecfbf792a7294d6a9ecc081908a4d4fec6c70cb6d9883bf479f359d8.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Enchantimals Secrets of Snowy Valley",
+      "content_type": "VIDEO",
+      "duration_minutes": 36.9,
+      "duration_seconds": 2211,
+      "date": "2025-11-09",
+      "last_accessed": "2025-11-09T17:22:26",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/0ce9d6de3d47021c214c0686a8cb87c43246df2563b6a85e25b23ec49099d4c7.jpg",
+      "activity_count": 2
+    },
+    {
+      "content_title": "Curious George: A Halloween Boo Suit",
+      "content_type": "VIDEO",
+      "duration_minutes": 24.9,
+      "duration_seconds": 1497,
+      "date": "2025-11-09",
+      "last_accessed": "2025-11-09T09:17:19",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/694bcdbdc6c76db4283f179b574e04fc9ae277e75751bca1860b75fe876c59a3.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Follow Your Passion",
+      "content_type": "VIDEO",
+      "duration_minutes": 6.0,
+      "duration_seconds": 358,
+      "date": "2025-11-09",
+      "last_accessed": "2025-11-09T17:43:36",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+      "activity_count": 2
+    },
+    {
+      "content_title": "Curious George",
+      "content_type": "VIDEO",
+      "duration_minutes": 48.5,
+      "duration_seconds": 2907,
+      "date": "2025-11-10",
+      "last_accessed": "2025-11-10T19:15:17",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/1eb731ce8c0be19abc287c8b780a50e8a8160e43e001c1ae066724d9427e0a02.jpg",
+      "activity_count": 2
+    },
+    {
+      "content_title": "Follow Your Passion",
+      "content_type": "VIDEO",
+      "duration_minutes": 32.3,
+      "duration_seconds": 1940,
+      "date": "2025-11-10",
+      "last_accessed": "2025-11-10T18:26:22",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+      "activity_count": 4
+    },
+    {
+      "content_title": "Marella",
+      "content_type": "VIDEO",
+      "duration_minutes": 22.1,
+      "duration_seconds": 1325,
+      "date": "2025-11-10",
+      "last_accessed": "2025-11-10T18:10:02",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+      "activity_count": 2
+    },
+    {
+      "content_title": "Part of the Herd",
+      "content_type": "VIDEO",
+      "duration_minutes": 10.8,
+      "duration_seconds": 645,
+      "date": "2025-11-10",
+      "last_accessed": "2025-11-10T08:11:22",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Strike a Chord",
+      "content_type": "VIDEO",
+      "duration_minutes": 10.1,
+      "duration_seconds": 605,
+      "date": "2025-11-10",
+      "last_accessed": "2025-11-10T07:45:38",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Curious George: A Halloween Boo Suit",
+      "content_type": "VIDEO",
+      "duration_minutes": 31.6,
+      "duration_seconds": 1893,
+      "date": "2025-11-11",
+      "last_accessed": "2025-11-11T08:04:09",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/694bcdbdc6c76db4283f179b574e04fc9ae277e75751bca1860b75fe876c59a3.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Marella",
+      "content_type": "VIDEO",
+      "duration_minutes": 11.1,
+      "duration_seconds": 665,
+      "date": "2025-11-11",
+      "last_accessed": "2025-11-11T17:57:40",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Strike a Chord",
+      "content_type": "VIDEO",
+      "duration_minutes": 6.1,
+      "duration_seconds": 364,
+      "date": "2025-11-11",
+      "last_accessed": "2025-11-11T17:46:31",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Peppa Pig: The Golden Boots",
+      "content_type": "VIDEO",
+      "duration_minutes": 0.8,
+      "duration_seconds": 49,
+      "date": "2025-11-11",
+      "last_accessed": "2025-11-11T17:58:08",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/ae94ca7e2755d893ee80d0bf3dc2258d79da0a94f83266b290fd73aa00a80402.jpg",
+      "activity_count": 2
+    },
+    {
+      "content_title": "The Very Special Jelly / The Bushwalk",
+      "content_type": "VIDEO",
+      "duration_minutes": 0.5,
+      "duration_seconds": 27,
+      "date": "2025-11-11",
+      "last_accessed": "2025-11-11T20:41:05",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/c8a687b2ac43d4e632d0430d1c73916c80d6e48657005d4d0949d732642f1555.png",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Curious George",
+      "content_type": "VIDEO",
+      "duration_minutes": 29.4,
+      "duration_seconds": 1763,
+      "date": "2025-11-12",
+      "last_accessed": "2025-11-12T18:19:04",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/1eb731ce8c0be19abc287c8b780a50e8a8160e43e001c1ae066724d9427e0a02.jpg",
+      "activity_count": 1
+    },
+    {
+      "content_title": "Marella",
+      "content_type": "VIDEO",
+      "duration_minutes": 24.5,
+      "duration_seconds": 1471,
+      "date": "2025-11-12",
+      "last_accessed": "2025-11-12T18:54:32",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+      "activity_count": 4
+    },
+    {
+      "content_title": "The Very Special Jelly / The Bushwalk",
+      "content_type": "VIDEO",
+      "duration_minutes": 22.6,
+      "duration_seconds": 1356,
+      "date": "2025-11-12",
+      "last_accessed": "2025-11-12T07:59:16",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/c8a687b2ac43d4e632d0430d1c73916c80d6e48657005d4d0949d732642f1555.png",
+      "activity_count": 2
+    },
+    {
+      "content_title": "Strike a Chord",
+      "content_type": "VIDEO",
+      "duration_minutes": 16.2,
+      "duration_seconds": 972,
+      "date": "2025-11-12",
+      "last_accessed": "2025-11-12T18:53:15",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/e26580a1d3b236001b60307ebb1a8167592c4fc14a72844f5ba0db7e2e4ad190.jpg",
+      "activity_count": 3
+    },
+    {
+      "content_title": "Sing",
+      "content_type": "VIDEO",
+      "duration_minutes": 50.0,
+      "duration_seconds": 2999,
+      "date": "2025-11-13",
+      "last_accessed": "2025-11-13T08:26:51",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/bb0ee193b4718171f27060aa19bdf9944be43252e2688aa2b2bbf0adfe7ee4af.jpg",
+      "activity_count": 2
+    },
+    {
+      "content_title": "The Very Special Jelly / The Bushwalk",
+      "content_type": "VIDEO",
+      "duration_minutes": 12.0,
+      "duration_seconds": 721,
+      "date": "2025-11-13",
+      "last_accessed": "2025-11-13T07:36:21",
+      "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/c8a687b2ac43d4e632d0430d1c73916c80d6e48657005d4d0949d732642f1555.png",
+      "activity_count": 1
+    }
+  ],
+  "time_limits": {
+    "period_configurations": [
+      {
+        "type": "DayOfWeek",
+        "name": "Friday",
+        "enabled": true,
+        "curfewConfigList": [
+          {
+            "end": "19:00",
+            "type": null,
+            "start": "08:00",
+            "enabled": true
+          }
+        ],
+        "time": 1763026088844,
+        "timeLimits": {
+          "contentTimeLimitsEnabled": false,
+          "contentTimeLimits": {
+            "ALL": 1440
+          }
+        },
+        "goalsConfig": {
+          "contentGoals": {
+            "category_BOOK": 30,
+            "category_VIDEO": 15,
+            "category_APP": 135,
+            "category_AUDIBLE": 15
+          },
+          "learnFirstEnabled": false
+        }
+      },
+      {
+        "type": "DayOfWeek",
+        "name": "Monday",
+        "enabled": true,
+        "curfewConfigList": [
+          {
+            "end": "19:00",
+            "type": null,
+            "start": "08:00",
+            "enabled": true
+          }
+        ],
+        "time": 1763026088845,
+        "timeLimits": {
+          "contentTimeLimitsEnabled": false,
+          "contentTimeLimits": {
+            "ALL": 1440
+          }
+        },
+        "goalsConfig": {
+          "contentGoals": {
+            "category_BOOK": 30,
+            "category_VIDEO": 15,
+            "category_APP": 135,
+            "category_AUDIBLE": 15
+          },
+          "learnFirstEnabled": false
+        }
+      },
+      {
+        "type": "DayOfWeek",
+        "name": "Saturday",
+        "enabled": true,
+        "curfewConfigList": [
+          {
+            "end": "19:00",
+            "type": null,
+            "start": "08:00",
+            "enabled": true
+          }
+        ],
+        "time": 1763026088845,
+        "timeLimits": {
+          "contentTimeLimitsEnabled": true,
+          "contentTimeLimits": {
+            "ALL": 180
+          }
+        },
+        "goalsConfig": {
+          "contentGoals": {
+            "category_BOOK": 30,
+            "category_VIDEO": 0,
+            "category_APP": 0,
+            "category_AUDIBLE": 0
+          },
+          "learnFirstEnabled": false
+        }
+      },
+      {
+        "type": "DayOfWeek",
+        "name": "Sunday",
+        "enabled": true,
+        "curfewConfigList": [
+          {
+            "end": "19:00",
+            "type": null,
+            "start": "08:00",
+            "enabled": true
+          }
+        ],
+        "time": 1763026088845,
+        "timeLimits": {
+          "contentTimeLimitsEnabled": false,
+          "contentTimeLimits": {
+            "ALL": 120
+          }
+        },
+        "goalsConfig": {
+          "contentGoals": {
+            "category_BOOK": 30,
+            "category_VIDEO": 0,
+            "category_APP": 0,
+            "category_AUDIBLE": 0
+          },
+          "learnFirstEnabled": false
+        }
+      },
+      {
+        "type": "DayOfWeek",
+        "name": "Thursday",
+        "enabled": true,
+        "curfewConfigList": [
+          {
+            "end": "19:00",
+            "type": null,
+            "start": "08:00",
+            "enabled": true
+          }
+        ],
+        "time": 1763026088845,
+        "timeLimits": {
+          "contentTimeLimitsEnabled": false,
+          "contentTimeLimits": {
+            "ALL": 1440
+          }
+        },
+        "goalsConfig": {
+          "contentGoals": {
+            "category_BOOK": 30,
+            "category_VIDEO": 15,
+            "category_APP": 135,
+            "category_AUDIBLE": 15
+          },
+          "learnFirstEnabled": false
+        }
+      },
+      {
+        "type": "DayOfWeek",
+        "name": "Tuesday",
+        "enabled": true,
+        "curfewConfigList": [
+          {
+            "end": "19:00",
+            "type": null,
+            "start": "08:00",
+            "enabled": true
+          }
+        ],
+        "time": 1763026088845,
+        "timeLimits": {
+          "contentTimeLimitsEnabled": false,
+          "contentTimeLimits": {
+            "ALL": 1440
+          }
+        },
+        "goalsConfig": {
+          "contentGoals": {
+            "category_BOOK": 30,
+            "category_VIDEO": 15,
+            "category_APP": 135,
+            "category_AUDIBLE": 15
+          },
+          "learnFirstEnabled": false
+        }
+      },
+      {
+        "type": "DayOfWeek",
+        "name": "Wednesday",
+        "enabled": true,
+        "curfewConfigList": [
+          {
+            "end": "19:00",
+            "type": null,
+            "start": "08:00",
+            "enabled": true
+          }
+        ],
+        "time": 1763026088845,
+        "timeLimits": {
+          "contentTimeLimitsEnabled": false,
+          "contentTimeLimits": {
+            "ALL": 1440
+          }
+        },
+        "goalsConfig": {
+          "contentGoals": {
+            "category_BOOK": 30,
+            "category_VIDEO": 15,
+            "category_APP": 135,
+            "category_AUDIBLE": 15
+          },
+          "learnFirstEnabled": false
+        }
+      }
+    ],
+    "daily_limits": {
+      "Friday": {
+        "enabled": true,
+        "minutes": null
+      },
+      "Monday": {
+        "enabled": true,
+        "minutes": null
+      },
+      "Saturday": {
+        "enabled": true,
+        "minutes": 180
+      },
+      "Sunday": {
+        "enabled": true,
+        "minutes": null
+      },
+      "Thursday": {
+        "enabled": true,
+        "minutes": null
+      },
+      "Tuesday": {
+        "enabled": true,
+        "minutes": null
+      },
+      "Wednesday": {
+        "enabled": true,
+        "minutes": null
+      }
+    },
+    "schedules": {
+      "Friday": {
+        "schedule_enabled": true,
+        "allowed_start": "08:00",
+        "allowed_end": "19:00",
+        "description": "Allowed 08:00 - 19:00"
+      },
+      "Monday": {
+        "schedule_enabled": true,
+        "allowed_start": "08:00",
+        "allowed_end": "19:00",
+        "description": "Allowed 08:00 - 19:00"
+      },
+      "Saturday": {
+        "schedule_enabled": true,
+        "allowed_start": "08:00",
+        "allowed_end": "19:00",
+        "description": "Allowed 08:00 - 19:00"
+      },
+      "Sunday": {
+        "schedule_enabled": true,
+        "allowed_start": "08:00",
+        "allowed_end": "19:00",
+        "description": "Allowed 08:00 - 19:00"
+      },
+      "Thursday": {
+        "schedule_enabled": true,
+        "allowed_start": "08:00",
+        "allowed_end": "19:00",
+        "description": "Allowed 08:00 - 19:00"
+      },
+      "Tuesday": {
+        "schedule_enabled": true,
+        "allowed_start": "08:00",
+        "allowed_end": "19:00",
+        "description": "Allowed 08:00 - 19:00"
+      },
+      "Wednesday": {
+        "schedule_enabled": true,
+        "allowed_start": "08:00",
+        "allowed_end": "19:00",
+        "description": "Allowed 08:00 - 19:00"
+      }
+    },
+    "timestamp": "2025-11-13T09:28:10.416024"
+  }
+}

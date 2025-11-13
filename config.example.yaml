@@ -1,0 +1,33 @@
+# Amazon Parental Dashboard to Home Assistant Integration Configuration
+
+# MQTT Broker Settings
+mqtt:
+  broker: "192.168.1.100"      # MQTT broker hostname or IP
+  port: 1883                    # MQTT broker port (default: 1883)
+  username: null                # MQTT username (null if no auth)
+  password: null                # MQTT password (null if no auth)
+  
+# Child Configuration
+children:
+  - name: "child"               # Friendly name (used in MQTT topics and Home Assistant)
+    # Child ID is auto-detected from Amazon household
+
+# Sync Configuration
+sync:
+  interval: 300                 # How often to sync data (seconds, default: 5 minutes)
+  
+# Amazon Dashboard Configuration
+amazon:
+  cookies_file: "amazon_parental/cookies.json"  # Path to cookies file
+  headless: true                                # Run browser in headless mode
+  
+# Logging
+logging:
+  level: "INFO"                 # DEBUG, INFO, WARNING, ERROR
+  file: null                    # Log file path (null for console only)
+
+# Home Assistant Entity Configuration
+home_assistant:
+  device_name: "Amazon Parental Dashboard"
+  manufacturer: "Amazon"
+  model: "Parental Dashboard Integration"
