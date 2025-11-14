@@ -358,6 +358,14 @@ class DashboardIntegration:
             try:
                 extractor = self._ensure_extractor()
                 
+                # Check cookie expiry before sync
+                expiry_status = extractor.check_cookie_expiry()
+                if expiry_status['expiring_soon'] and not expiry_status['expired']:
+                    print("⚠️  Cookies expiring soon - triggering auto-refresh...")
+                    extractor.auto_refresh_session()
+                elif expiry_status['expired']:
+                    print("❌ Cookies expired - please refresh via web UI at http://YOUR_IP:5000")
+                
                 # Get usage statistics
                 usage = extractor.get_usage_statistics()
                 if usage:
@@ -420,16 +428,60 @@ class DashboardIntegration:
         # Start MQTT loop in background thread for command handling
         self.mqtt_client.client.loop_start()
         
+        # Start Flask web server in background thread
+        flask_thread = threading.Thread(target=self._run_flask_server, daemon=True)
+        flask_thread.start()
+        
         print(f"\n🔁 Starting continuous sync (every {interval_seconds} seconds)")
         print("   - Monitoring: Usage, viewing history, time limits")
         print("   - Controls: Daily limit switches, screen time adjustments")
+        print("   - Web UI: Available on port 5000 for cookie management")
         print("Press Ctrl+C to stop\n")
+        
+        refresh_trigger_file = Path(__file__).parent / ".refresh_trigger"
+        cookies_reloaded_file = Path(__file__).parent / ".cookies_reloaded"
         
         try:
             # Do initial sync
             self.sync_data()
             
             while True:
+                # Check for cookie reload trigger from web UI
+                if cookies_reloaded_file.exists():
+                    try:
+                        trigger_time = float(cookies_reloaded_file.read_text())
+                        # Only process if trigger is recent (within last 30 seconds)
+                        if time.time() - trigger_time < 30:
+                            print("\n🔄 New cookies detected - reloading extractor...")
+                            with self.extractor_lock:
+                                # Close old extractor and force recreation with new cookies
+                                self._close_extractor()
+                                print("✅ Extractor will reload on next sync")
+                        cookies_reloaded_file.unlink()
+                    except Exception as e:
+                        print(f"⚠️  Error processing cookies reload: {e}")
+                        if cookies_reloaded_file.exists():
+                            cookies_reloaded_file.unlink()
+                
+                # Check for manual refresh trigger from web UI
+                if refresh_trigger_file.exists():
+                    try:
+                        trigger_time = float(refresh_trigger_file.read_text())
+                        # Only process if trigger is recent (within last 10 seconds)
+                        if time.time() - trigger_time < 10:
+                            print("\n🔄 Manual refresh triggered from web UI...")
+                            with self.extractor_lock:
+                                extractor = self._ensure_extractor()
+                                if extractor.auto_refresh_session():
+                                    print("✅ Manual refresh successful")
+                                else:
+                                    print("⚠️  Manual refresh failed")
+                        refresh_trigger_file.unlink()
+                    except Exception as e:
+                        print(f"⚠️  Error processing refresh trigger: {e}")
+                        if refresh_trigger_file.exists():
+                            refresh_trigger_file.unlink()
+                
                 # Process any pending commands from MQTT
                 with self.extractor_lock:
                     self._process_commands()
@@ -448,6 +500,16 @@ class DashboardIntegration:
             print("\n\n👋 Stopping integration...")
         finally:
             self.mqtt_client.client.loop_stop()
+            self._close_extractor()
+    
+    def _run_flask_server(self):
+        """Run Flask server in background thread."""
+        try:
+            from cookie_refresh_server import run_server
+            run_server(host='0.0.0.0', port=5000)
+        except Exception as e:
+            print(f"⚠️  Failed to start Flask server: {e}")
+            print("   Cookie web UI will not be available")
             self._close_extractor()
             self.mqtt_client.disconnect()
     

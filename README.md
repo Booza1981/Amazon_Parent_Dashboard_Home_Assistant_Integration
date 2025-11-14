@@ -21,6 +21,13 @@ Control and monitor your Amazon Parental Dashboard remotely through Home Assista
 - **MQTT Auto-Discovery**: Entities automatically appear in Home Assistant
 - **Configurable Interval**: Set sync frequency (default: 5 minutes)
 
+###  Automatic Cookie Management
+- **Auto-Save**: Cookies automatically saved after successful operations
+- **Auto-Refresh**: Session refreshed when cookies near expiry (< 4 hours)
+- **Web UI**: Browser-based interface for cookie status and manual refresh (port 5000)
+- **Upload Interface**: Easy cookie upload from any device on your network
+- **Graceful Error Handling**: Automatic retry on authentication failures
+
 ## Quick Start
 
 ### Prerequisites
@@ -76,7 +83,19 @@ docker-compose up -d
 docker-compose logs -f
 ```
 
-**Step 5: Check Home Assistant**
+The container will start with:
+- MQTT connection to Home Assistant
+- Automatic data synchronization
+- Cookie management web UI on port 5000
+
+**Step 5: Access the Cookie Management Web UI (Optional)**
+
+Visit `http://YOUR_SERVER_IP:5000` from any device on your network to:
+- View cookie expiry status
+- Manually trigger session refresh
+- Upload new cookies when needed
+
+**Step 6: Check Home Assistant**
 
 New entities should appear automatically under MQTT integration.
 
@@ -138,16 +157,70 @@ automation:
 # View logs
 docker-compose logs -f
 
-# Restart
+# Restart (after uploading new cookies)
 docker-compose restart
 
 # Stop
 docker-compose down
 
-# Update cookies when they expire
-docker-compose down
-python amazon_parental/refresh_cookies.py
+# Rebuild after code changes
+docker-compose build
 docker-compose up -d
+```
+
+## Cookie Management
+
+### Automatic Cookie Refresh
+
+The system automatically:
+- Saves cookies after successful API calls (every 5 minutes)
+- Checks cookie expiry before each sync
+- Triggers auto-refresh when cookies expire within 4 hours
+- Retries failed requests after refreshing session
+
+### Web UI (Port 5000)
+
+Access the cookie management interface at `http://YOUR_SERVER_IP:5000`:
+
+**Features:**
+- 📊 Real-time cookie status display
+- ⏰ Expiry countdown for critical cookies
+- 🔄 One-click manual refresh button
+- 📤 Drag-and-drop cookie upload
+- 🎨 Mobile-friendly responsive design
+
+### When to Upload New Cookies
+
+Upload fresh cookies via the web UI when:
+- You see HTTP 401 errors in logs
+- Web UI shows "Cookies Expired" status
+- Schedule changes in Home Assistant fail
+- After extended container downtime
+
+### Option 1: Upload via Web UI (Recommended)
+
+1. **On a machine with a browser**, refresh cookies:
+   ```bash
+   python amazon_parental/refresh_cookies.py
+   ```
+
+2. **Visit** `http://YOUR_SERVER_IP:5000` from any device
+
+3. **Click** "Upload cookies.json"
+
+4. **Select** the `amazon_parental/cookies.json` file
+
+5. **Restart** the container to apply:
+   ```bash
+   docker-compose restart
+   ```
+
+### Option 2: Direct Copy
+
+```bash
+# After refreshing cookies locally
+docker cp ./amazon_parental/cookies.json amazon-parental-dashboard:/app/amazon_parental/cookies.json
+docker-compose restart
 ```
 
 ## Headless Linux Server Setup
@@ -305,21 +378,18 @@ If you can't run the script but have access to a browser:
    chmod 600 amazon_parental/cookies.json
    ```
 
-### When Cookies Expire (Every Few Weeks)
+### When Cookies Expire
 
-Cookies will eventually expire. When you see **HTTP 401 errors** in the logs:
+Amazon cookies typically last 24-48 hours. The system handles this automatically:
 
-1. Stop the Docker container:
-   ```bash
-   docker-compose down
-   ```
+1. **Auto-refresh**: When cookies are within 4 hours of expiry, the system attempts automatic refresh
+2. **Manual upload**: If auto-refresh fails, upload fresh cookies via web UI at `http://YOUR_SERVER_IP:5000`
+3. **Monitoring**: Check logs for cookie status: `docker-compose logs -f`
 
-2. **Repeat the cookie generation** using any of the options above
-
-3. Restart:
-   ```bash
-   docker-compose up -d
-   ```
+**Signs cookies need refresh:**
+- `❌ API call failed -> HTTP 401` in logs
+- `⚠️ Cookies expired` in web UI
+- Home Assistant controls stop working
 
 ### Security Tips for Linux Servers
 
@@ -333,22 +403,40 @@ Cookies will eventually expire. When you see **HTTP 401 errors** in the logs:
 
 ### HTTP 401 Errors
 
-**Cause**: Amazon session cookies have expired.
+**Cause**: Amazon session cookies have expired or are invalid.
 
 **Solution**:
-```bash
-docker-compose down
-python amazon_parental/refresh_cookies.py
-docker-compose up -d
-```
 
-Or use one of the headless server methods above to regenerate cookies.
+1. **Check web UI**: Visit `http://YOUR_SERVER_IP:5000` to see cookie status
+
+2. **Upload fresh cookies**:
+   - Refresh cookies on a machine with browser
+   - Upload via web UI
+   - Restart container: `docker-compose restart`
+
+3. **Check logs**: `docker-compose logs -f | grep -E "401|Cookie|Login"`
+
+**Note**: Auto-refresh handles most cases. Manual upload only needed if auto-refresh fails.
 
 ### Entities Not Appearing in Home Assistant
 
-1. Check MQTT connection: `docker logs amazon-parental-dashboard | grep "Connected to MQTT"`
+1. Check MQTT connection: `docker-compose logs | grep "Connected to MQTT"`
 2. Verify MQTT discovery is enabled in Home Assistant
-3. Restart: `docker-compose restart`
+3. Check MQTT broker credentials in docker-compose.yml
+4. Restart: `docker-compose restart`
+
+### Web UI Not Accessible
+
+1. Verify port is exposed: `docker-compose ps` (should show `0.0.0.0:5000->5000/tcp`)
+2. Check firewall: Allow port 5000 on your server
+3. Access from same network: `http://SERVER_IP:5000`
+
+### Schedule Changes Not Working
+
+1. Check container logs for errors
+2. Verify cookies are valid (check web UI)
+3. Ensure child ID was detected: Look for `✅ Logged in successfully` in logs
+4. Restart after uploading fresh cookies
 
 ## Project Structure
 
@@ -357,21 +445,24 @@ amazon-parental-dashboard/
  amazon_parental/          # Amazon integration package
     __init__.py
     control.py
-    data_extractor.py
+    data_extractor.py      # Enhanced with auto-save & refresh
     refresh_cookies.py
-    cookies.json          # (gitignored)
+    cookies.json           # (gitignored)
  tests/
     __init__.py
     test_integration.py
+ cookie_refresh_server.py  # Flask web UI for cookie management
  config.example.yaml       # Template configuration
- dashboard_to_homeassistant.py
+ dashboard_to_homeassistant.py  # Main daemon with auto-refresh
  mqtt_publisher.py
- docker-compose.yml
+ docker-compose.yml        # Exposes ports 5000 (web UI)
  Dockerfile
  setup.py
  requirements.txt
+ restart.sh                # Quick restart script
  LICENSE
  CONTRIBUTING.md
+ TROUBLESHOOTING.md
  README.md
 ```
 
@@ -398,8 +489,14 @@ Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 ## Support
 
 If you encounter issues:
-1. Check the troubleshooting section above
+1. Check the web UI: `http://YOUR_SERVER_IP:5000` for cookie status
 2. Review Docker logs: `docker-compose logs -f`
-3. Verify MQTT connection in Home Assistant
-4. Ensure cookies are fresh (refresh if > 1 week old)
-5. Open an issue on GitHub with logs and error details
+3. Check the troubleshooting section above
+4. Verify MQTT connection in Home Assistant
+5. Ensure cookies are valid (upload fresh ones if needed)
+6. Open an issue on GitHub with logs and error details
+
+**Monitoring Tips:**
+- **Good signs**: `✅ Logged in successfully`, `💾 Cookies saved`, `✅ Sync complete`
+- **Warning signs**: `⚠️ Cookies expiring soon` (auto-handled)
+- **Action needed**: `❌ HTTP 401`, `🔑 Please refresh cookies manually`

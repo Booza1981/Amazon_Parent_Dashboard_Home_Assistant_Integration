@@ -49,6 +49,7 @@ class DashboardDataExtractor:
         self.context = None
         self.page = None
         self.child_id = None  # Will be auto-detected
+        self.last_cookie_save = None  # Track when cookies were last saved
         
     def login(self):
         """Login using saved cookies and auto-detect child ID."""
@@ -111,6 +112,99 @@ class DashboardDataExtractor:
         print("⚠️  Warning: Could not auto-detect child ID")
         print("   You will need to specify child_id manually when calling methods")
         print("   Tip: Check the URL after navigating to your child's dashboard")
+        
+        # Save cookies after successful login
+        self.save_cookies()
+    
+    def save_cookies(self):
+        """Save current browser cookies to file for persistence."""
+        if not self.context:
+            return
+        
+        try:
+            self.context.storage_state(path=COOKIES_FILE)
+            self.last_cookie_save = datetime.now()
+            print(f"💾 Cookies saved at {self.last_cookie_save.strftime('%H:%M:%S')}")
+        except Exception as e:
+            print(f"⚠️  Failed to save cookies: {e}")
+    
+    def check_cookie_expiry(self) -> Dict[str, Any]:
+        """
+        Check cookie expiry status.
+        
+        Returns:
+            Dictionary with:
+            - expired: bool - if any critical cookies are expired
+            - expiring_soon: bool - if cookies expire within 4 hours
+            - details: dict - expiry info for each critical cookie
+        """
+        if not self.context:
+            return {"expired": True, "expiring_soon": True, "details": {}}
+        
+        try:
+            cookies = self.context.cookies()
+            critical_cookies = ['ft-session', 'ft-panda-csrf-token', 'at-acbuk']
+            now = datetime.now().timestamp()
+            four_hours = 4 * 60 * 60
+            
+            result = {
+                "expired": False,
+                "expiring_soon": False,
+                "details": {}
+            }
+            
+            for cookie in cookies:
+                if cookie['name'] in critical_cookies:
+                    expires = cookie.get('expires', 0)
+                    time_left = expires - now
+                    
+                    result['details'][cookie['name']] = {
+                        "expires": datetime.fromtimestamp(expires).isoformat() if expires else None,
+                        "seconds_left": time_left if expires else None
+                    }
+                    
+                    if expires and time_left < 0:
+                        result['expired'] = True
+                    elif expires and time_left < four_hours:
+                        result['expiring_soon'] = True
+            
+            return result
+        except Exception as e:
+            print(f"⚠️  Error checking cookie expiry: {e}")
+            return {"expired": False, "expiring_soon": False, "details": {}}
+    
+    def auto_refresh_session(self) -> bool:
+        """
+        Attempt to refresh the session by navigating to the dashboard.
+        This works if cookies are still valid but close to expiry.
+        
+        Returns:
+            True if refresh was successful, False otherwise
+        """
+        if not self.page:
+            print("⚠️  No page available for refresh")
+            return False
+        
+        try:
+            print("🔄 Attempting to auto-refresh session...")
+            # Navigate to dashboard to trigger cookie refresh
+            self.page.goto(f"{BASE_URL}/intro", wait_until="networkidle")
+            self.page.wait_for_timeout(2000)
+            
+            # Save the refreshed cookies
+            self.save_cookies()
+            
+            # Check if refresh was successful
+            expiry_status = self.check_cookie_expiry()
+            if not expiry_status['expired']:
+                print("✅ Session auto-refreshed successfully")
+                return True
+            else:
+                print("⚠️  Session refresh failed - cookies still expired")
+                return False
+        except Exception as e:
+            print(f"❌ Error during auto-refresh: {e}")
+            return False
     
     def _get_csrf_token(self) -> Optional[str]:
         """Extract CSRF token from page cookies."""
@@ -163,10 +257,36 @@ class DashboardDataExtractor:
             
             if response.status == 200:
                 try:
+                    # Save cookies after successful API call (every 5 minutes)
+                    if self.last_cookie_save is None or \
+                       (datetime.now() - self.last_cookie_save).total_seconds() > 300:
+                        self.save_cookies()
                     return response.json()
                 except:
                     # Some endpoints return empty body or non-JSON on success
                     return {}
+            elif response.status == 401:
+                # Authentication failed - try to auto-refresh session
+                print("⚠️  Authentication failed (401) - attempting auto-refresh...")
+                if self.auto_refresh_session():
+                    # Retry the request once after refresh
+                    print(f"🔄 Retrying {method} {endpoint}...")
+                    try:
+                        if method == "GET":
+                            response = self.page.request.get(url, headers=headers)
+                        elif method == "POST":
+                            response = self.page.request.post(url, data=json_data, headers=headers)
+                        elif method == "PUT":
+                            response = self.page.request.put(url, data=json_data, headers=headers)
+                        
+                        if response.status == 200:
+                            return response.json() if response.text() else {}
+                    except:
+                        pass
+                
+                print(f"❌ API call failed after refresh: {method} {endpoint} -> HTTP 401")
+                print(f"   🔑 Please refresh cookies manually via web UI at http://YOUR_IP:5000")
+                return None
             else:
                 print(f"⚠️  API call failed: {method} {endpoint} -> HTTP {response.status}")
                 try:

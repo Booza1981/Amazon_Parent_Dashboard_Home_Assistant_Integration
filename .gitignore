@@ -42,3 +42,4 @@ Thumbs.db
 *.tmp
 .cache/
 dashboard_data.json
+docker-compose.local.yml

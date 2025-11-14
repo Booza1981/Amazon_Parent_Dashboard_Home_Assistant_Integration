@@ -20,11 +20,15 @@ services:
       SYNC_INTERVAL: "300"             # Sync every 5 minutes (300 seconds)
     
     volumes:
-      # Mount cookies.json to persist authentication
-      - ./amazon_parental/cookies.json:/app/amazon_parental/cookies.json:ro
+      # Mount cookies.json to persist authentication (read-write so container can update)
+      - ./amazon_parental/cookies.json:/app/amazon_parental/cookies.json
       
       # Optional: Mount config file
       # - ./config.yaml:/app/config.yaml:ro
+    
+    ports:
+      # Expose Flask web UI for cookie management
+      - "5000:5000"
     
     networks:
       - homeassistant
@@ -45,4 +49,11 @@ networks:
 # 2. Ensure amazon_parental/cookies.json exists (run: python amazon_parental/refresh_cookies.py)
 # 3. Build and start: docker-compose up -d
 # 4. View logs: docker-compose logs -f
-# 5. Stop: docker-compose down
+# 5. Cookie Management Web UI: http://YOUR_IP:5000
+# 6. Stop: docker-compose down
+#
+# Cookie Management:
+# - Cookies are automatically saved after successful API calls
+# - Auto-refresh triggered when cookies are expiring (< 4 hours)
+# - Manual refresh via web UI: http://YOUR_IP:5000
+# - Upload new cookies via web UI if auto-refresh fails
